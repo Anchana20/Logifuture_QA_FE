@@ -1,0 +1,28 @@
+{
+  "name": "logifuture_qa_fe",
+  "version": "1.0.0",
+  "description": "cypress automation framework",
+  "main": "index.js",
+  "scripts": {
+    "open_testRunner": "npx cypress open",
+    "run_desktop_Headed_Production":"npx cypress run --env env=production,viewport=desktop --headed",
+    "run_desktop_Headless_Production":"npx cypress run --env env=production,viewport=desktop",
+    "run_desktop_Headed_UAT":"npx cypress run --env env=uat,viewport=desktop --headed",
+    "run_desktop_Headless_UAT":"npx cypress run --env env=uat,viewport=desktop",
+    "run_iphone_XR_Headed_Production": "npx cypress run --env env=production,viewport=iphone_xr --headed",
+    "run_iphone_XR_Headless_Production":"npx cypress run --env env=production,viewport=iphone_xr"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Anchana20/Logifuture_QA_FE.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Anchana20/Logifuture_QA_FE/issues"
+  },
+  "homepage": "https://github.com/Anchana20/Logifuture_QA_FE#readme",
+  "devDependencies": {
+    "cypress": "^14.0.1"
+  }
+}

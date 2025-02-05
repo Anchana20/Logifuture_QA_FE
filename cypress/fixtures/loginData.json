@@ -1,0 +1,27 @@
+{
+  "productName":"MacBook",
+
+    "production": {
+      "login": {
+        "username": "test.qa@dispostable.com",
+        "password": "Cypress123!!",
+        "invalid_username": "tester.qa@dispostable.com",
+        "invalid_password": "Cypress@999"
+      },
+      "message": {
+        "successMessage": "Success: You have added MacBook to your shopping cart!",
+        "errorMessage": "Failure: Invalid credentials",
+        "warningMessage": " Warning: No match for E-Mail Address and/or Password."
+      }
+    },
+    "uat": {
+      "login": {
+        "username": "tester.qa@dispostable.com",
+        "password": "Cypress12345"
+      },
+      "message": {
+        "successMessage": "You have added MacBook to your shopping cart!",
+        "errorMessage": "Invalid credentials"
+      }
+    }
+  }

@@ -1,0 +1,11 @@
+    export const search_input= '.form-control.input-lg';
+    export const click_search= '.btn.btn-default.btn-lg';
+    export const product= 'img[title="MacBook"]';
+    export const addtocart= 'Add to Cart';
+    export const successMessages= 'div.alert.alert-success.alert-dismissible';
+    export const warningMessage = '.alert.alert-danger.alert-dismissible';
+    export const myAccountText = 'My Account';
+    export const logOutButton = '.list-group-item';
+    export const email = '#input-email';
+    export const password = '#input-password';
+    export const loginButton = 'input.btn.btn-primary';
