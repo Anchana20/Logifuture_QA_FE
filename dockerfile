@@ -5,7 +5,7 @@ FROM cypress/included:12.8.1
 WORKDIR /app
 
 # Set default environment variables (can be overridden)
-ARG ENV=production
+ARG ENV=uat
 ARG VIEWPORT=iphone_xr
 
 # Set environment variables inside the container
