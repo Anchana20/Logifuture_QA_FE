@@ -31,10 +31,3 @@ jobs:
         run: |
           npx cypress run --env env=${{ inputs.cypress_env }},viewport=${{ inputs.CYPRESS_VIEWPORT }}
 
-
-      - name: Save Cypress videos and screenshots
-        if: always()
-        uses: actions/upload-artifact@v3
-        with:
-          name: cypress-results
-          path: cypress/reports  # Adjust path if necessary
