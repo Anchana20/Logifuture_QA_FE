@@ -1,5 +1,5 @@
 const { defineConfig } = require("cypress");
-const loginData = require("../Logifuture_QA_FE/cypress/fixtures/loginData.json"); // Importing JSON data
+const loginData = require("./cypress/fixtures/loginData.json"); // Importing JSON data
 
 const env = {
   production: {
@@ -7,7 +7,7 @@ const env = {
     ...loginData.production
   },
   uat: {
-    url: "https://reqres.in/",
+    url: "https://naveenautomationlabs.com/opencart/index.php?route=account/login",
     ...loginData.uat
   },
 };

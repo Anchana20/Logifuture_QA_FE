@@ -24,17 +24,17 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 import * as loginLocator from "../support/Locators/loginLocators";
-Cypress.Commands.add('desktopLogin', (email, password) => {
+Cypress.Commands.add('login', (email, password) => {
     cy.visit(Cypress.env('url'))
     cy.get(loginLocator.email).type(email);
     cy.get(loginLocator.password).type(password);
     cy.get(loginLocator.loginButton).click();
 })
 
-Cypress.Commands.add('mobileLogin', (email, password) => {
-    cy.viewport('iphone-xr');
-    cy.visit(Cypress.env('url'))
-    cy.get(loginLocator.email).type(email);
-    cy.get(loginLocator.password).type(password);
-    cy.get(loginLocator.loginButton).click();
-})
+// Cypress.Commands.add('mobileLogin', (email, password) => {
+//     cy.viewport('iphone-xr');
+//     cy.visit(Cypress.env('url'))
+//     cy.get(loginLocator.email).type(email);
+//     cy.get(loginLocator.password).type(password);
+//     cy.get(loginLocator.loginButton).click();
+// })

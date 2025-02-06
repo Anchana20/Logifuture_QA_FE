@@ -1,0 +1,40 @@
+name: Cypress test execution
+on:
+    workflow_dispatch:
+        inputs:
+          cypress_env:
+            description: "Environment (e.g., production, uat)"
+            required: true
+            default: "production"
+            type: string
+          cypress_viewport:
+            description: "Viewport (e.g., desktop, iphone_xr)"
+            required: true
+            default: "desktop"
+            type: string
+jobs:
+  cypress-run:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Use Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run Cypress tests
+        run: |
+          npx cypress run --env env=${{ inputs.cypress_env }},viewport=${{ inputs.CYPRESS_VIEWPORT }}
+
+
+      - name: Save Cypress videos and screenshots
+        if: always()
+        uses: actions/upload-artifact@v3
+        with:
+          name: cypress-results
+          path: cypress/reports  # Adjust path if necessary
